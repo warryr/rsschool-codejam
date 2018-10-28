@@ -6,9 +6,9 @@ function make(...args) {
             args.forEach(arg => array.push(arg));
             return keep;
         } else {
-            return array.reduce((sum, num) => sum += num);
+            return array.reduce((acc, num) => args[0](acc, num));
         }
     };
-    
+
     return keep;
 }
