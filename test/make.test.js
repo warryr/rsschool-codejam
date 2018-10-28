@@ -1,7 +1,7 @@
 const assert = require('assert');
 const describe = require('mocha');
 const it = require('mocha');
-const make = require('../src/make/make.js');
+const make = require('../src/make.js');
 
 describe('make', () => {
   const sum = (a, b) => a + b;
