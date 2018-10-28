@@ -1,4 +1,4 @@
-function make(...args) {
+module.exports = function make(...args) {
     const array = args;
 
 	function keep(...args) {
@@ -11,4 +11,4 @@ function make(...args) {
     };
 
     return keep;
-}
+};
