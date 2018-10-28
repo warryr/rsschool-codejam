@@ -1,4 +1,4 @@
-function sumOfOther(arr) {
+module.exports = function sumOfOther(arr) {
     const newArr = [];
     for (let i = 0; i < arr.length; i++) {
         const temp = [];
@@ -11,4 +11,4 @@ function sumOfOther(arr) {
         newArr[i] = temp.reduce((sum, num) => sum += num);
     }
     return newArr;
-}
+};
