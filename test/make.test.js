@@ -1,6 +1,7 @@
-import { strictEqual } from 'assert';
-import { describe, it } from 'mocha';
-import make from './make';
+const assert = require('assert');
+const describe = require('mocha');
+const it = require('mocha');
+const make = require('../src/make/make.js');
 
 describe('make', () => {
   const sum = (a, b) => a + b;
@@ -8,25 +9,25 @@ describe('make', () => {
 
   describe('should work for different arrays', () => {
     it('one number', () => {
-      strictEqual(make(5)(sum), 5);
+      assert.strictEqual(make(5)(sum), 5);
     });
 
     it('arrays of 1', () => {
-      strictEqual(make(5)(15)(sum), 20);
+      assert.strictEqual(make(5)(15)(sum), 20);
     });
 
     it('long arrays', () => {
-      strictEqual(make(4, 5, 6, 7)(4, 5, 6, 7)(sum), 44);
+      assert.strictEqual(make(4, 5, 6, 7)(4, 5, 6, 7)(sum), 44);
     });
 
     it('arrays of different sizes', () => {
-      strictEqual(make(3)(4, 5)(6, 7, 8)(sum), 33);
+      assert.strictEqual(make(3)(4, 5)(6, 7, 8)(sum), 33);
     });
   });
 
   describe('should work for different functions as a parameter', () => {
     it('multiply', () => {
-      strictEqual(make(3, 4)(5)(multiply), 60);
+      assert.strictEqual(make(3, 4)(5)(multiply), 60);
     });
   });
 });
