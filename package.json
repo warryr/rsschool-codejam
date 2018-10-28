@@ -2,7 +2,7 @@
   "name": "rsschool-codejam",
   "version": "1.0.0",
   "description": "",
-  "main": "/**/make.test.js",
+  "main": "*.test.js",
   "devDependencies": {
     "chai": "^4.2.0",
     "eslint": "^5.8.0",
@@ -11,7 +11,7 @@
     "mocha": "^5.2.0"  
   },
   "scripts": {
-    "test": " mocha make.test.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
